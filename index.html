@@ -33,6 +33,7 @@
           <!-- NAVLINKS -->
           <a href="#/about" class="nav-link">About</a>
           <a href="#/cars" class="nav-link">Cars</a>
+          <a href="#/houses" class="nav-link">Houses</a>
         </div>
       </div>
       <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
@@ -45,7 +46,73 @@
 
     <section id="router-view">
       <!-- primary viewport -->
+      <div class="container-fluid p-3">
+        <div class="row mb-5">
+          <h1>Houses</h1>
+        </div>
+        <section class="row mb-3">
+          <div class="col-12">
+            <form onsubmit="app.HousesController.createHouse(event)" class="house-form">
 
+              <div class="mb-3">
+                <label for="bedrooms">Bedrooms:</label>
+                <input name="bedrooms" id="bedrooms" required type="number">
+              </div>
+
+              <div class="mb-3">
+                <label for="bathrooms">Bathrooms:</label>
+                <input name="bathrooms" id="bathrooms" required type="number">
+              </div>
+
+              <div class="mb-3">
+                <label for="levels">Levels:</label>
+                <input name="levels" id="levels" required type="number">
+              </div>
+
+              <div class="mb-3">
+                <label for="imgUrl">Image URL:</label>
+                <input name="imgUrl" id="imgUrl" maxlength="500" type="text">
+              </div>
+
+              <div class="mb-3">
+                <label for="year">Year:</label>
+                <input name="year" id="year" required type="number">
+              </div>
+
+              <div class="mb-3">
+                <label for="price">Price:</label>
+                <input name="price" id="price" required type="number">
+              </div>
+
+              <div class="mb-3">
+                <label for="description">Description:</label>
+                <input name="description" id="description" required type="text">
+              </div>
+
+              <button type="submit" class="btn btn-success">Submit</button>
+
+            </form>
+          </div>
+        </section>
+        <section id="houseCards" class="row">
+          <div class="col-12 d-flex">
+            <img class="house-img" src="https://floorcentral.com/wp-content/uploads/2014/07/sick-house-syndrome.jpg"
+              alt="">
+            <div class="p-3 bg-secondary">
+              <div class="d-flex justify-content-between">
+                <p class="fw-bold">Posted: 05/11/23</p>
+                <p class="fw-bold">Updated: 05/11/23</p>
+              </div>
+              <p>Bedrooms: 3</p>
+              <p>Bathrooms: 2</p>
+              <p>Levels: 2</p>
+              <p>Year: 2003</p>
+              <p>Price: 230000</p>
+              <p>description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, recusandae.</p>
+              </divc>
+            </div>
+        </section>
+      </div>
     </section>
 
 
